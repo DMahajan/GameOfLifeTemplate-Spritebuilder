@@ -7,6 +7,7 @@
 //
 
 #import "Grid.h"
+#import "Creature.h"
 
 // these are variables that cannot be changed
 static const int GRID_ROWS = 8;
@@ -19,7 +20,7 @@ static const int GRID_COLUMNS = 10;
     // used to place creatures correctly on the grid
     float _cellWidth;
     float _cellHeight;
-    
+}
     - (void)onEnter{
         [super onEnter];
         
@@ -28,7 +29,7 @@ static const int GRID_COLUMNS = 10;
         // accept touches on the grid
         self.userInteractionEnabled = YES;
     }
-    
+     
     - (void)setupGrid {
         // divide the grid's size by the number of columns/rows to figure out the width and height of each cell
         _cellWidth = self.contentSize.width / GRID_COLUMNS;
@@ -65,5 +66,5 @@ static const int GRID_COLUMNS = 10;
         }
         
     }
-}
+
 @end
