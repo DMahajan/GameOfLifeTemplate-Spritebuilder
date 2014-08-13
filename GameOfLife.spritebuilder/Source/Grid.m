@@ -114,9 +114,9 @@ static const int GRID_COLUMNS = 10;
             // now examine every cell around the current one
             
             // go through the top row of the current cell, the row the cell is in , and the bottom row
-            for (int x = (i-1); x < (i+1); x++) {
+            for (int x = (i-1); x <= (i+1); x++) {
                 // go through the left, middle, and right columns
-                for (int y = (j-1); y < (j+1); y++) {
+                for (int y = (j-1); y <= (j+1); y++) {
                     // check that the cell we're checking isn't off screen
                     BOOL isIndexValid;
                     isIndexValid = [self isIndexValidForX:x andY:y];
